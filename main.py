@@ -34,7 +34,14 @@ class MainHandler(BaseHandler):
     def post(self):
         number = float(self.request.get("number"))
         converter = 0.6214
-        result = number * converter
+        operation = self.request.get("operation")
+
+        if operation == "*":
+            result = number * converter
+            result = str(result) + (" milj")
+        else:
+            result = number / converter
+            result = str(result) + (" kilometrov")
 
         params = {"rezultat": result}
         return self.render_template("hello.html", params=params)

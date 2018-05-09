@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <h1>Dobrodošli v programu ki pretvarja kilometre v milje.</h1>
+  <h1>Pretvornik</h1>
     <form method="post">
-      <h4>Vnesite število kilometrov:</h4><input type="text" name="number" autofocus>
+      <h4>Vnesite število:</h4><input type="text" name="number" autofocus>
+      <select class="" name="operation">
+        <option value="*">Kilometri v milje</option>
+        <option value="/">Milje v kilometre</option>
+      </select>
+      <br>
+      <br>
       <input type="submit" value="Izračunaj">
     </form>
-    <h1>{{rezultat}} milj</h1>
+    <h1>{{rezultat}}</h1>
 </body>
 </html>
